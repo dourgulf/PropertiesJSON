@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		896DDEC316536FAB008F86F2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 896DDEC216536FAB008F86F2 /* Cocoa.framework */; };
 		896DDECD16536FAB008F86F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 896DDECB16536FAB008F86F2 /* InfoPlist.strings */; };
-		896DDECF16536FAB008F86F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 896DDECE16536FAB008F86F2 /* main.m */; };
+		896DDECF16536FAB008F86F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 896DDECE16536FAB008F86F2 /* main.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		896DDED316536FAB008F86F2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 896DDED116536FAB008F86F2 /* Credits.rtf */; };
-		896DDED616536FAB008F86F2 /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 896DDED516536FAB008F86F2 /* TMAppDelegate.m */; };
+		896DDED616536FAB008F86F2 /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 896DDED516536FAB008F86F2 /* TMAppDelegate.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		896DDED916536FAC008F86F2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896DDED716536FAC008F86F2 /* MainMenu.xib */; };
-		896DDEE1165371FD008F86F2 /* TMDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 896DDEE0165371FD008F86F2 /* TMDataModel.m */; };
+		896DDEE1165371FD008F86F2 /* TMDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 896DDEE0165371FD008F86F2 /* TMDataModel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		896DDEE716537321008F86F2 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 896DDEE416537321008F86F2 /* JSONKit.m */; };
 		896DDEE816537321008F86F2 /* PropertyJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 896DDEE616537321008F86F2 /* PropertyJSON.m */; };
+		896DDEEA16537BAD008F86F2 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 896DDEE916537BAD008F86F2 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		896DDEE416537321008F86F2 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = ../JSONKit.m; sourceTree = "<group>"; };
 		896DDEE516537321008F86F2 /* PropertyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PropertyJSON.h; path = ../PropertyJSON.h; sourceTree = "<group>"; };
 		896DDEE616537321008F86F2 /* PropertyJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PropertyJSON.m; path = ../PropertyJSON.m; sourceTree = "<group>"; };
+		896DDEE916537BAD008F86F2 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README; path = ../README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		896DDEB316536FAB008F86F2 = {
 			isa = PBXGroup;
 			children = (
+				896DDEE916537BAD008F86F2 /* README */,
 				896DDEE216537316008F86F2 /* PropertiesJSON */,
 				896DDEC816536FAB008F86F2 /* Demo */,
 				896DDEC116536FAB008F86F2 /* Frameworks */,
@@ -180,6 +183,7 @@
 				896DDECD16536FAB008F86F2 /* InfoPlist.strings in Resources */,
 				896DDED316536FAB008F86F2 /* Credits.rtf in Resources */,
 				896DDED916536FAC008F86F2 /* MainMenu.xib in Resources */,
+				896DDEEA16537BAD008F86F2 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +326,7 @@
 				896DDEDE16536FAC008F86F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,10 @@
 #import "JSONKit.h"
 #import <objc/runtime.h>
 
+#if __has_feature(objc_arc)
+#error JSONKit does not support Objective-C Automatic Reference Counting (ARC)
+#endif
+
 static BOOL IsBasicSerailizeType(id value)
 {
     return [value isKindOfClass:[NSString class]] ||
@@ -204,6 +208,7 @@ static NSString *GetPropertyType(NSString *attribute){
                             [valueObject setPropertiesFromDictionary:value];
                             [self performSelector:selector withObject:valueObject];
                         }
+                        [valueObject release];
                     }
                 }
             }

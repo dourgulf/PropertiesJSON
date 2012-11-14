@@ -10,12 +10,13 @@
 #import "TMDataModel.h"
 
 #import "PropertyJSON.h"
+#import "JSONKit.h"
 
 @implementation TMAppDelegate
 
 - (void)dealloc
 {
-    [super dealloc];
+//    [super dealloc];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -53,9 +54,15 @@
     TMDataModel1 *dm2 = [TMDataModel1 new];
     [dm2 setPropertiesFromDictionary:model2.propArray[2]];
     NSLog(@"model property of array[2]\n%@", [dm2 propertiesDescription]);
-    [dm1 release];
-    [model release];
-    [model2 release];
+    
+    // model array also supported
+    NSArray *modelArray = [NSArray arrayWithObjects:dm1, model, nil];
+    NSString *json2 = [modelArray propertiesJSONString];
+    NSLog(@"model array\n%@", json2);
+    NSArray *jsonObj = [json2 objectFromJSONString];
+    TMDataModel *model3 = [TMDataModel new];
+    [model3 setPropertiesFromDictionary:jsonObj[1]];
+    NSLog(@"model 3\n%@", [model3 propertiesDescription]);
 }
 
 @end

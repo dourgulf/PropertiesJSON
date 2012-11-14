@@ -1,0 +1,4 @@
+根据对象的属性（仅支持NSString，NSNumber，NSArray，NSDictionary，以及自定义对象，不支持非对象类型--如CGFloat。序列化成JSON字符串。
+JSON字符串反序列化成对应对象的属性。
+注意：如果对象的属性是一个数组或者字典，因为OBJC无法得知数组（或者字典）元素的类型，因此反序列化的时候不会创建自定义对象。
+如果希望将数组元素反序列化成具体对象，则需要创建改类型对象，然后调用setPropertiesFromDictionary，传递数据元素的值作为参数即可。

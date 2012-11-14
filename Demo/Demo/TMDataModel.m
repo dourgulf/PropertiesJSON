@@ -12,9 +12,9 @@
 - (void)dealloc
 {
     NSLog(@"%@ delloc", NSStringFromClass([self class]));
-    [_propNumber release];
-    [_notSupported release];
-    [super dealloc];
+//    [_propNumber release];
+//    [_notSupported release];
+//    [super dealloc];
 }
 
 -(NSString *)propReadOnly {
@@ -28,10 +28,10 @@
 - (void)dealloc
 {
     NSLog(@"%@ delloc", NSStringFromClass([self class]));
-    [_propArray release];
-    [_propDictionary release];
-    [_propData1 release];
-    [super dealloc];
+//    [_propArray release];
+//    [_propDictionary release];
+//    [_propData1 release];
+//    [super dealloc];
 }
 
 @end
