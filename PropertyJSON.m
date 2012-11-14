@@ -137,7 +137,13 @@ static NSString *GetPropertyType(NSString *attribute){
             if (!value) {
                 value = [NSNull null];
             }
-            NSLog(@"set property:%@ of type:%@", name, GetPropertyType(attribute));
+            NSString *valueType = GetPropertyType(attribute);
+            if (valueType.length == 0) {
+                NSLog(@"property:%@ not an object type", name);
+                continue;
+            }
+            
+            NSLog(@"set property:%@ of type:%@", name, valueType);
             if (IsBasicSerailizeType(value)) {
                 [dict setValue:value forKey:name];
             }
@@ -179,6 +185,10 @@ static NSString *GetPropertyType(NSString *attribute){
             SEL selector = MakeSetSelector(name, attribute);
             if (selector && [self respondsToSelector:selector]) {
                 NSString *valueType = GetPropertyType(attribute);
+                if (valueType.length == 0) {
+                    NSLog(@"property:%@ not an object type", name);
+                    continue;
+                }
                 if (IsBasicDeserializeType(valueType)) {
                     // basic type set the value directly
                     NSLog(@"set basic property:%@ of type:%@", name, valueType);
